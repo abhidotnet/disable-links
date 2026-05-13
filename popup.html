@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 250px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    #disableBtn {
+      background-color: #d32f2f;
+      color: white;
+    }
+    #disableBtn:hover {
+      background-color: #b71c1c;
+    }
+    #enableBtn {
+      background-color: #4caf50;
+      color: white;
+    }
+    #enableBtn:hover {
+      background-color: #388e3c;
+    }
+    #visualBtn {
+      background-color: #2196f3;
+      color: white;
+    }
+    #visualBtn:hover {
+      background-color: #1976d2;
+    }
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: bold;
+      display: none;
+    }
+    .active {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    .inactive {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+    .checkbox-group {
+      margin: 10px 0;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h3 style="margin: 0;">Disable Links</h3>
+    <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;">Toggle links on current page</p>
+  </div>
+  
+  <div class="checkbox-group">
+    <label>
+      <input type="checkbox" id="visualEffects">
+      Show visual effects
+    </label>
+  </div>
+  
+  <button class="btn" id="disableBtn">Disable All Links</button>
+  <button class="btn" id="enableBtn">Enable All Links</button>
+  <button class="btn" id="visualBtn">Toggle Visual Mode</button>
+  
+  <div id="status" class="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
