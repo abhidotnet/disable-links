@@ -51,9 +51,8 @@ These are practical scenarios people use “link freeze” tools for:
 
 | Permission | Why |
 |------------|-----|
-| `activeTab` | Lets the popup send messages to the tab you are using |
-| `scripting` | Listed in `manifest.json` but **not used** by the current code (links run via registered `content_scripts`). You can remove it before publishing if you want the smallest permission set, unless you plan to use `chrome.scripting` later |
-| `storage` | Saves the “Show visual effects” checkbox (and install defaults) locally |
+| `activeTab` | Lets the popup query the current tab and send messages to the content script when you open the popup |
+| `storage` | Saves the “Show visual effects” checkbox preference locally |
 
 No remote servers: state stays on the device in `chrome.storage.local`.
 

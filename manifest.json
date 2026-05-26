@@ -1,19 +1,17 @@
 {
   "manifest_version": 3,
   "name": "Disable All Links",
-  "version": "1.0",
-  "description": "Disables all hyperlinks on web pages",
-  "permissions": ["activeTab", "scripting", "storage"],
+  "version": "1.0.1",
+  "description": "Instantly disable/enable all hyperlinks on any webpage.",
+  "permissions": ["activeTab", "storage"],
   "action": {
     "default_popup": "popup.html",
+    "default_title": "Disable All Links",
     "default_icon": {
       "16": "icon16.png",
       "48": "icon48.png",
       "128": "icon128.png"
     }
-  },
-  "background": {
-    "service_worker": "background.js"
   },
   "content_scripts": [
     {
